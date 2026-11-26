@@ -1,0 +1,133 @@
+/* Telegram mavzusiga moslashuvchi ranglar */
+:root {
+    --bg-color: var(--tg-theme-bg-color, #121212);
+    --text-color: var(--tg-theme-text-color, #ffffff);
+    --hint-color: var(--tg-theme-hint-color, #999999);
+    --button-color: var(--tg-theme-button-color, #2481cc);
+    --button-text-color: var(--tg-theme-button-text-color, #ffffff);
+    --card-bg: var(--tg-theme-secondary-bg-color, #1e1e1e);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 70px; /* Pastki menyu uchun joy */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Yuqori qism */
+.header {
+    text-align: center;
+    padding: 20px 15px;
+    background: linear-gradient(135deg, #1a2b4c, #0d1526);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+/* Katalog qismi */
+.catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+}
+
+/* Chiroyli kartochkalar */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:active {
+    transform: scale(0.98); /* Bosilganda kichrayish effekti */
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-color: #2a2a2a;
+}
+
+.card h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.card p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: var(--hint-color);
+    line-height: 1.4;
+}
+
+/* Sotib olish tugmasi */
+.card button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+
+.card button:active {
+    opacity: 0.8;
+}
+
+/* Pastki qotib turuvchi menyu */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.cart-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #2ea6ff, #1c8ce6);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(46, 166, 255, 0.4);
+}
