@@ -1,0 +1,65 @@
+/* webapp/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--tg-theme-bg-color, #1a2b4c); /* Telegram mavzusiga moslashadi */
+    color: var(--tg-theme-text-color, #ffffff);
+    margin: 0;
+    padding: 15px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.card button {
+    background-color: #2ea6ff; /* Telegram ko'k rangi */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card button:active {
+    transform: scale(0.98);
+    background-color: #1c8ce6;
+}
